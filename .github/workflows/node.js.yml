@@ -31,4 +31,7 @@ jobs:
           node-version: ${{ matrix.node-version }}
           cache: "npm"
       - run: npm ci
-      - run: npm start
+      - name: Send notification
+        run: npm start
+        env:
+          DISCORD_HOOK: ${{ secrets.DISCORD_HOOK }}
