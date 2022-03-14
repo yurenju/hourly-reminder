@@ -6,7 +6,7 @@ name: Hourly Reminder
 on:
   schedule:
     # * is a special character in YAML so you have to quote this string
-    - cron: "0 8-20 * * *"
+    - cron: "0 0-12 * * *" # in +8 timezone is 8-20
 
 jobs:
   build:
